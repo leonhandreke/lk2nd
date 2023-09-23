@@ -1,0 +1,17 @@
+// SPDX-License-Identifier: GPL-2.0-only
+
+/dts-v1/;
+
+#include <skeleton32.dtsi>
+#include <lk2nd.dtsi>
+
+/ {
+	qcom,msm-id = <178 0x47 0x8200>;
+};
+
+&lk2nd {
+	shamu {
+		model = "Motorola Google Nexus 6";
+		compatible = "motorola,shamu", "qcom,apq8084", "lk2nd,device";
+		lk2nd,match-cmdline = "* androidboot.hardware.sku=XT1100 *";
+};
